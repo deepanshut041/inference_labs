@@ -15,3 +15,31 @@ checkpoints/
 *.pth
 *.ckpt
 *.safetensors
+
+# Local credentials and machine-specific files
+*.pem
+*.key
+*.p12
+*.pfx
+credentials.json
+service-account*.json
+.DS_Store
+Thumbs.db
+
+# Local environments, caches, generated output and model files
+venv/
+.venv-*/
+.ai/
+.cache/
+.mypy_cache/
+.ipynb_checkpoints/
+.coverage
+coverage/
+htmlcov/
+test-results/
+playwright-report/
+*.gguf
+*.bin
+*.onnx
+*.tflite
+*.tmp
