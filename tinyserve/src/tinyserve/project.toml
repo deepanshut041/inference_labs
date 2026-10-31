@@ -1,0 +1,12 @@
+[project]
+name = "tinyserve"
+state = "boilerplate"
+implementation_owner = "learner"
+reference_url = "https://github.com/priyammaz/tinyserve"
+reference_commit = "32854e9ac4c43f64b6577adcff155e8c593b0aad"
+planned_features = ["model execution", "paged KV cache", "prefix caching", "continuous batching", "streaming HTTP API", "optimized kernels"]
+
+[runtime]
+model_id = ""
+device = "unselected"
+backend = "unselected"

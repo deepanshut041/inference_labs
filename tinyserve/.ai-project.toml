@@ -1,0 +1,40 @@
+title = "tinyserve"
+description = "Build a readable inference engine with paged KV caching and continuous batching."
+focus = "Check the boilerplate; choose the first model and execution device before implementation."
+notice = "Setup only. The learner will implement the model, cache, scheduler, kernels and HTTP API."
+
+[labels]
+run = "Run"
+setup = "Setup env"
+build = "Build pkg"
+test = "Checks"
+
+[[runners]]
+id = "status"
+label = "Project status"
+path = "src/status.py"
+description = "Show setup state, reference and the next implementation step."
+
+[[runners]]
+id = "check"
+label = "Check setup"
+path = "src/check_setup.py"
+description = "Check Python, the installed package and packaged configuration."
+
+[[runners]]
+id = "config"
+label = "Show configuration"
+path = "src/show_config.py"
+description = "Show the setup scope and unselected model/device."
+
+[[resources]]
+label = "Project goal and setup"
+path = "README.md"
+
+[[resources]]
+label = "Configuration"
+path = "src/tinyserve/project.toml"
+
+[[resources]]
+label = "TinyServe reference"
+url = "https://github.com/priyammaz/tinyserve"
