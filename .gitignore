@@ -43,3 +43,9 @@ playwright-report/
 *.onnx
 *.tflite
 *.tmp
+
+node_modules/
+.ruff_cache/
+*.log
+artifacts/
+.sources/
