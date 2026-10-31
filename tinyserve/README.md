@@ -6,6 +6,21 @@ I will build a small, readable LLM inference engine myself, using [priyammaz/tin
 
 This is an ordinary project folder owned by the Inference Labs collection, without its own nested Git repository. Reference reviewed on 2026-10-30 at commit [`32854e9`](https://github.com/priyammaz/tinyserve/tree/32854e9ac4c43f64b6577adcff155e8c593b0aad). The reference's CUDA/Triton path is a future hardware decision; the scaffold runs on CPU without those dependencies.
 
+## Run independently
+
+From this project folder in a standalone Inference Labs checkout. The workspace CLI and sibling repositories are optional.
+
+```bash
+uv sync --frozen
+uv run --frozen tinyserve status
+uv run --frozen python -m tinyserve check
+uv run --frozen python src/show_config.py
+uv run --frozen pytest -q
+uv build
+```
+
+Python is pinned to 3.12.13. Runtime dependencies are intentionally empty; development uses the locked pytest version. Select and lock the model/runtime dependencies during implementation. The installed command and configuration also work from an unrelated working directory.
+
 ## Run from the workspace
 
 ```bash
@@ -21,19 +36,6 @@ This is an ordinary project folder owned by the Inference Labs collection, witho
 In the TUI, open **Projects → Inference Labs → tinyserve**. Choose Project status, Check setup or Show configuration, then Run (`g`). Setup env, Checks and Build pkg use the same project and environment. Checks currently validate setup only.
 
 Workspace actions use `.ai/envs/tinyserve/` and write build outputs to `.ai/builds/tinyserve/`. They do not start a server. From another directory use the absolute path to the workspace's `ai` launcher.
-
-## Run inside this folder
-
-```bash
-uv sync --frozen
-uv run --frozen tinyserve status
-uv run --frozen python -m tinyserve check
-uv run --frozen python src/show_config.py
-uv run --frozen pytest -q
-uv build
-```
-
-Python is pinned to 3.12.13. Runtime dependencies are intentionally empty; development uses the locked pytest version. Select and lock the model/runtime dependencies during implementation. The installed command and configuration also work from an unrelated working directory.
 
 ## Files and first implementation step
 
