@@ -21,6 +21,8 @@ uv build
 
 Python is pinned to 3.12.13. Runtime dependencies are intentionally empty; development uses the locked pytest version. Select and lock the model/runtime dependencies during implementation. The installed command and configuration also work from an unrelated working directory.
 
+Dependency installation uses copy mode, configured in `pyproject.toml`, so setup works quietly when uv's cache and this checkout are on different filesystems. No shell setting or extra command flag is needed.
+
 ## Run from the workspace
 
 ```bash

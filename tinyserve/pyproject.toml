@@ -25,3 +25,6 @@ include = ["/src", "/tests", "/README.md", "/pyproject.toml", "/uv.lock", "/.pyt
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 pythonpath = ["src"]
+
+[tool.uv]
+link-mode = "copy"
